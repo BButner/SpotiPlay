@@ -24,15 +24,6 @@ else:
             results = spotify.user_playlist(spotify_username, playlist['id'], fields="tracks,next")
             tracks = results['tracks']
 
-            playlist_exists = False
-            for gpm_playlist in gpm_playlists:
-                if gpm_playlist.get('name') == playlist['name']:
-                    playlist_exists = True
-
-            if not playlist_exists:
-                api.create_playlist(playlist['name'])
-                playlist_exists = True
-
             for i, item in enumerate(tracks['items']):
                 track = item['track']
                 search_results = api.search(track['name'], 10).get('song_hits')
