@@ -1,16 +1,18 @@
 from gmusicapi import Mobileclient
 import spotipy
 
+# USER INPUT GOES HERE
 spotify_username = ""
 spotify_token = ""
-play_username = ""
+play_email = ""
 play_password = ""
+# DO NOT EDIT ANYTHING AFTER THIS LINE
 
 spotify = spotipy.Spotify(auth=spotify_token)
 spotify_playlists = spotify.user_playlists(spotify_username)
 
 api = Mobileclient()
-api.login(play_username, play_password, Mobileclient.FROM_MAC_ADDRESS)
+api.login(play_email, play_password, Mobileclient.FROM_MAC_ADDRESS)
 gpm_playlists = api.get_all_playlists()
 
 for playlist in spotify_playlists['items']:
