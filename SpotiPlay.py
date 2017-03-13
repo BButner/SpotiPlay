@@ -17,7 +17,7 @@ gpm_playlists = api.get_all_playlists()
 
 for playlist in spotify_playlists['items']:
     if playlist['owner']['id'] == spotify_username:
-        print(playlist['name'])
+        print("Currently Moving:", playlist['name'])
         results = spotify.user_playlist(spotify_username, playlist['id'], fields="tracks,next")
         tracks = results['tracks']
 
