@@ -19,6 +19,17 @@ if spotify_username == "" or spotify_token == "" or play_email == "" or play_pas
     print("Please make sure you have filled out all user input fields!")
 else:
     for playlist in spotify_playlists['items']:
+        for playlist in spotify_playlists['items']:
+            if playlist['owner']['id'] == spotify_username:
+                playlist_exists = False
+                for gpm_playlist in gpm_playlists:
+                    if gpm_playlist.get('name') == playlist['name']:
+                        playlist_exists = True
+
+                if not playlist_exists:
+                    api.create_playlist(playlist['name'])
+                    playlist_exists = True
+        gpm_playlists = api.get_all_playlists()
         if playlist['owner']['id'] == spotify_username:
             print("Currently Moving:", playlist['name'])
             results = spotify.user_playlist(spotify_username, playlist['id'], fields="tracks,next")
