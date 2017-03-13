@@ -15,10 +15,8 @@ First things first I'm completely new to Python and this is the first project I 
   * Click "Get OAuth Token" ![](http://i.imgur.com/dyg45fH.png) 
   * Make sure "Playlist Read Private" is checked, then "Request Token" ![](http://i.imgur.com/fJH76YM.png)
 
-2. Edit "SpotiPlay.py" and "Playlists.py" input the required information in lines 5-8.
+2. Edit "SpotiPlay.py" input the required information in lines 5-8.
 
-3. Run "Playlists.py" with `python Playlists.py` to create all of the playlists on your Google Play Music
-
-4. Run "SpotiPlay.py" with `python SpotiPlay.py` to move all of the songs into the playlists
+3. Run "SpotiPlay.py" with `python SpotiPlay.py` to move all of your Spotify Playlists to Google Play Music
 
 ####THIS IS NOT PERFECT. WITH HOW IT WORKS IT MAY NOT FIND THE CORRECT SONG AND ADD A COMPLETELY DIFFERENT SONG WITH A SIMILAR TITLE####
