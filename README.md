@@ -21,4 +21,4 @@ First things first I'm completely new to Python and this is the first project I 
 
 4. Run "SpotiPlay.py" with `python SpotiPlay.py` to move all of the songs into the playlists
 
-##THIS IS NOT PERFECT. WITH HOW IT WORKS IT MAY NOT FIND THE CORRECT SONG AND ADD A COMPLETELY DIFFERENT SONG WITH A SIMILAR TITLE##
+####THIS IS NOT PERFECT. WITH HOW IT WORKS IT MAY NOT FIND THE CORRECT SONG AND ADD A COMPLETELY DIFFERENT SONG WITH A SIMILAR TITLE####
